@@ -55,6 +55,10 @@ Everything is in `index.html`: the styles at the top, the logic at the bottom.
 | How the progress bars count | `function units` and `function subCounts` |
 | Where data is stored | `function makeLocalDB` (swap it for Firebase, Supabase, etc. to sync across devices; it only needs `add`, `doc(id).update/delete` and `onSnapshot`) |
 
+## About
+
+Built by Harry Chen to keep track of research to-dos week by week. The code was generated with Claude (Anthropic's AI assistant) through conversation, then tested and adjusted. Feel free to fork it and make it your own.
+
 ## License
 
 MIT. Use it, change it, share it.
