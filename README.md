@@ -18,6 +18,19 @@ A weekly to-do board in a single HTML file. It needs no install, no account and 
 2. Go to **Settings → Pages**, set *Source* to **Deploy from a branch**, branch `main`, folder `/ (root)`, then click **Save**.
 3. After a minute your board is live at `https://<your-username>.github.io/<repo-name>/`.
 
+**Option 3: host it yourself.** It's a single static file, so anything that serves files works.
+
+- *On your own computer* (gives you a stable address like `http://localhost:8000`):
+  ```bash
+  git clone https://github.com/<your-username>/<repo-name>.git
+  cd <repo-name>
+  python3 -m http.server 8000      # or: npx serve .
+  ```
+  Then open <http://localhost:8000> in your browser. Stop the server with `Ctrl+C`.
+- *On a server or another host:* copy `index.html` to any static web host (Netlify, Cloudflare Pages, a university web space, nginx/Apache). No build step and no backend are needed.
+
+Note: the browser stores the board per address. A board you used at `file://…/index.html` won't show up at `http://localhost:8000` or on your GitHub Pages link, and vice versa. Use **Save backup / Restore backup** to move it between them, and stick to one address (and port) for everyday use.
+
 ## Where your data lives
 
 Tasks are saved in **your browser's local storage** on the device you're using. That means:
